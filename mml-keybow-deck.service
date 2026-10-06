@@ -1,0 +1,19 @@
+[Unit]
+Description=MML Keybow Deck
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Environment=DECK_BROKER=192.168.1.15
+# Environment=DECK_USER=...
+# Environment=DECK_PASS=...
+ExecStartPre=/home/pi/mml/mml_keybow_deck/setup_hid_gadget.sh
+ExecStart=/usr/bin/python3 /home/pi/mml/mml_keybow_deck/mml_keybow_deck.py --config /home/pi/mml/mml_keybow_deck/buttons.json
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

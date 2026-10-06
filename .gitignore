@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Backups and temporary files
+*.bak
+*.tmp
+*~
+.DS_Store
+
+# Local environment / credentials
+.env
+*.env
+
+# IDE/editor files
+.vscode/
+.idea/

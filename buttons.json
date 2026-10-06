@@ -1,0 +1,52 @@
+{
+  "rows": 4,
+  "columns": 3,
+  "margin_ratio": 0.1,
+  "corner_radius": 12,
+  "default_font": "OpenSans-Regular.af",
+  "default_color": "white",
+  "background_color": "black",
+  "led_brightness": 0.4,
+  "start_page": 0,
+  "keyboard_layout": "uk",
+  "buttons_defs": [
+    {"name":"Mute","page":0,"row":0,"column":0,"label":"Mic\nMute","bg_color":"#c0392b","label_color":"white","outline_color":"white",
+     "action":{"type":"hid","keys":"ctrl+shift+m"}},
+    {"name":"Cam","page":0,"row":0,"column":1,"label":"Camera","bg_color":"#2980b9","label_color":"white","outline_color":"white",
+     "action":{"type":"hid","keys":"ctrl+shift+o"}},
+    {"name":"Share","page":0,"row":0,"column":2,"label":"Share","bg_color":"#27ae60","label_color":"black","outline_color":"black",
+     "action":{"type":"hid","keys":"ctrl+shift+s"}},
+
+    {"name":"Prev","page":0,"row":1,"column":0,"label":"Prev","bg_color":"#34495e","color":"white",
+     "action":{"type":"consumer","key":"prev"}},
+    {"name":"PlayPause","page":0,"row":1,"column":1,"label":"Play /\nPause","bg_color":"#8e44ad","color":"white",
+     "action":{"type":"consumer","key":"play_pause"}},
+    {"name":"Next","page":0,"row":1,"column":2,"label":"Next","bg_color":"#34495e","color":"white",
+     "action":{"type":"consumer","key":"next"}},
+
+    {"name":"VolDown","page":0,"row":2,"column":0,"label":"Vol -","bg_color":"#d35400","color":"white",
+     "action":{"type":"consumer","key":"vol_down"}},
+    {"name":"VolMute","page":0,"row":2,"column":1,"label":"Mute","bg_color":"#7f8c8d","color":"white",
+     "action":{"type":"consumer","key":"mute"}},
+    {"name":"VolUp","page":0,"row":2,"column":2,"label":"Vol +","bg_color":"#d35400","color":"white",
+     "action":{"type":"consumer","key":"vol_up"}},
+
+    {"name":"Lamp","page":0,"row":3,"column":0,"label":"Desk\nlamp","bg_color":"#f1c40f","label_color":"black","outline_color":"black",
+     "action":{"type":"mqtt","topic":"home/office/lamp/set","payload":"toggle"}},
+    {"name":"Email","page":0,"row":3,"column":1,"label":"Email","bg_color":"#16a085","color":"white",
+     "action":[{"type":"text","text":"me@example.com"},{"type":"hid","keys":"enter"}]},
+    {"name":"More","page":0,"row":3,"column":2,"label":"More >","bg_color":"#222222","color":"white",
+     "action":{"type":"page","to":"next"}},
+
+    {"name":"Copy","page":1,"row":0,"column":0,"label":"Copy","bg_color":"#2c3e50","color":"white",
+     "action":{"type":"hid","keys":"ctrl+c"}},
+    {"name":"Paste","page":1,"row":0,"column":1,"label":"Paste","bg_color":"#2c3e50","color":"white",
+     "action":{"type":"hid","keys":"ctrl+v"}},
+    {"name":"Macro13","page":1,"row":0,"column":2,"label":"F13","bg_color":"#e67e22","color":"white",
+     "action":{"type":"hid","keys":"f13"}},
+    {"name":"Scene","page":1,"row":1,"column":0,"label":"Movie\nscene","bg_color":"#6c3483","color":"white",
+     "action":{"type":"mqtt","topic":"home/scene/set","payload":{"scene":"movie"}}},
+    {"name":"Back","page":1,"row":3,"column":0,"label":"< Back","bg_color":"#222222","color":"white",
+     "action":{"type":"page","to":"prev"}}
+  ]
+}
